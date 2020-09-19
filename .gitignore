@@ -1,0 +1,6 @@
+# Virtual env
+/venv
+
+# Cache
+/__pycache__
+.DS_Store
