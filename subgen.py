@@ -4,12 +4,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 directory = os.fsencode('texts/')
 font = ImageFont.truetype('Roboto-Bold.ttf', size=45)
-(x, y) = (50, 50)
-message = "Happy Birthday!"
-color = 'rgb(0, 0, 0)' # black color
-stroke_color = (0, 0, 255)
-
-# draw the message on the background
+(x, y) = (20, 20)
+color = (0, 163, 255)
+stroke_color = (0, 0, 0)
 
 for filename in os.listdir(directory):
     print(filename.decode("utf-8"))
@@ -20,6 +17,7 @@ for filename in os.listdir(directory):
     content = file_object.read()
     print(content)
 
+    # draw the content on the background
     draw.text((x, y), content, fill=color, font=font, stroke_width=1, stroke_fill=stroke_color)
 
     image.save('images/'+filename.decode("utf-8")+'.png')

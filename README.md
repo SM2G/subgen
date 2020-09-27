@@ -10,10 +10,11 @@ Customize as needed.
 virtualenv venv -p python3
 source venv/bin/activate
 pip install --upgrade pip
-pip install -r requirements.tx
+pip install -r requirements.txt
+./setup.sh
 ```
 
 ### Usage
 ``` bash
-python subgen.py
+./venv/bin/python subgen.py
 ```
